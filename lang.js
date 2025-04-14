@@ -6,6 +6,7 @@ const langData = {
       about: "소개",
       youtube: "유튜브 영상",
       projects: "프로젝트",
+      "report-title": "클라우드 보안 보고서",
       skills: "기술 스택",
       contact: "연락처",
       "intro-text": "단국대학교 성악 전공, 사이버보안 복수전공 <br /> 유튜브 \"Victenor\" 운영 중",
