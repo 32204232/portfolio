@@ -1,0 +1,437 @@
+﻿{
+   "AFSEnvironment" : 0,
+   "AFSUrl" : "https://activity.windows.com",
+   "AccountSettings" : [],
+   "ActivityAssetAadAudience" : "https://assets.activity.microsoft.com",
+   "ActivityAssetBatchRequestNumberLimit" : 10,
+   "ActivityAssetBatchRequestPayloadSizeLimit" : 1024000,
+   "ActivityAssetBatchUrl" : "https://assets.activity.windows.com/v1/assets/$batch",
+   "ActivityAssetBatchWaitTimeInMS" : 5000,
+   "ActivityAssetBatchingEnabled" : true,
+   "ActivityAssetEnvironment" : 0,
+   "ActivityAssetMsaScopeEndPoint" : "https://assets.activity.windows.com",
+   "ActivityAssetUrl" : "https://assets.activity.windows.com/v1/assets",
+   "ActivityStoreInfo" : [
+      {
+         "active" : true,
+         "activityStoreId" : "F95B1DA1-9B2A-8384-E28A-3706983F4F75",
+         "stableUserId" : "f66d2332bc22b9fd"
+      },
+      {
+         "active" : true,
+         "activityStoreId" : "98DBB12D-D531-9411-CEBE-B360BA9F5F73",
+         "stableUserId" : "AAD.90f93568-0a05-4559-a368-5bffbb91dc91"
+      }
+   ],
+   "AfcPrivacySettings" : {
+      "ActivityFeed" : 0,
+      "CloudSync" : 0,
+      "PublishUserActivity" : 0
+   },
+   "AfsConnectivityEnabled" : true,
+   "AfsPostInitializeSyncWaitMs" : 10000,
+   "AfsSyncFrequencyMs" : 86400000,
+   "Authentication.Environment" : 0,
+   "BluetoothTransportEnabled" : true,
+   "BluetoothTransportHostingAllowed" : true,
+   "CcsApiVersion" : "/api/v1",
+   "CcsDefaultServerName" : "romeccs.microsoft.com",
+   "CcsExtendedPollingMode" : 0,
+   "CcsPollingBackoffEnabled" : false,
+   "CcsPollingInterval" : 0,
+   "CcsPollingMaxIntervalCount" : 0,
+   "CcsPollingMode" : 1,
+   "CcsSeenRequestIds" : [],
+   "CcsSeenRequestIdsLastUpdatedTime" : "0000-00-00T00:00:00.000",
+   "Cloud.SessionIdleTimeoutIntervalSecs" : 3600,
+   "CloudDataGroupPolicyActivitiyPolicies" : [
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "",
+            "Type" : 11
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "Microsoft",
+            "Type" : 11
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "Microsoft.Accessibility",
+            "Type" : 11
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "Microsoft.Credentials",
+            "Type" : 11
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "Microsoft.Default",
+            "Type" : 11
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "Microsoft.Ink",
+            "Type" : 11
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "Microsoft.Language",
+            "Type" : 11
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "Microsoft.Personalization",
+            "Type" : 11
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "MicrosoftDevice",
+            "Type" : 11
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "MicrosoftDevice.Accessibility",
+            "Type" : 11
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "MicrosoftDevice.Credentials",
+            "Type" : 11
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "MicrosoftDevice.Default",
+            "Type" : 11
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "MicrosoftDevice.Ink",
+            "Type" : 11
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "MicrosoftDevice.Language",
+            "Type" : 11
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "MicrosoftUserProfile",
+            "Type" : 11
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "MicrosoftUserProfile.Accessibility",
+            "Type" : 11
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "MicrosoftUserProfile.Credentials",
+            "Type" : 11
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "MicrosoftUserProfile.Default",
+            "Type" : 11
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "MicrosoftUserProfile.Ink",
+            "Type" : 11
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "MicrosoftUserProfile.Language",
+            "Type" : 11
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "",
+            "Type" : 12
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "Microsoft",
+            "Type" : 12
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "Microsoft.Accessibility",
+            "Type" : 12
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "Microsoft.Credentials",
+            "Type" : 12
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "Microsoft.Default",
+            "Type" : 12
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "Microsoft.Ink",
+            "Type" : 12
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "Microsoft.Language",
+            "Type" : 12
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "Microsoft.Personalization",
+            "Type" : 12
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "MicrosoftDevice",
+            "Type" : 12
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "MicrosoftDevice.Accessibility",
+            "Type" : 12
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "MicrosoftDevice.Credentials",
+            "Type" : 12
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "MicrosoftDevice.Default",
+            "Type" : 12
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "MicrosoftDevice.Ink",
+            "Type" : 12
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "MicrosoftDevice.Language",
+            "Type" : 12
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "MicrosoftUserProfile",
+            "Type" : 12
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "MicrosoftUserProfile.Accessibility",
+            "Type" : 12
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "MicrosoftUserProfile.Credentials",
+            "Type" : 12
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "MicrosoftUserProfile.Default",
+            "Type" : 12
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "MicrosoftUserProfile.Ink",
+            "Type" : 12
+         },
+         "Source" : 1
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "MicrosoftUserProfile.Language",
+            "Type" : 12
+         },
+         "Source" : 1
+      }
+   ],
+   "CloudDataMDMActivitiyPolicies" : [
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "",
+            "Type" : 11
+         },
+         "Source" : 2
+      },
+      {
+         "BlockedOperationFlags" : 0,
+         "Scope" : {
+            "PermisionScope" : "",
+            "Type" : 12
+         },
+         "Source" : 2
+      }
+   ],
+   "CloudTransportEnabled" : true,
+   "CloudTransportHostingAllowed" : true,
+   "CustomAuthClsid" : "",
+   "DdsAadRegisterUrl" : "",
+   "DdsAadSyncUrl" : "",
+   "DdsMsaRegisterUrl" : "",
+   "DdsMsaSyncUrl" : "",
+   "DdsRegistrationEnabled" : true,
+   "FastPathEnabled" : true,
+   "FastPathSequencingEnabled" : true,
+   "FlowControl.AckSendInterval" : 100,
+   "FormatVersion" : 51,
+   "InboundMessageThreadPoolCount" : 12,
+   "LargePayload.ExtendedTimeoutSecs" : 180,
+   "LargePayload.ThresholdBytes" : 65536,
+   "LatestCdpUsedTime" : "0000-00-00T00:00:00.000",
+   "LatestFixAccountToastTime" : {},
+   "LowestRssiAllowedForBleDiscovery" : -75,
+   "MaximumConcurrentBluetoothSends" : 5,
+   "MaximumSocketBuffers" : 32,
+   "MaximumUnreliableMessageQueueSize" : 100,
+   "Metrics.iKey" : "A-Rome",
+   "OutboundMessageThreadPoolCount" : 1,
+   "POBoxes" : [
+      {
+         "alternateId" : "cortana.xdevice",
+         "name" : "ShareFileBinaryHost",
+         "packageId" : "cortana.xdevice",
+         "type" : "binary"
+      },
+      {
+         "alternateId" : "cortana.xdevice",
+         "name" : "NotificationActionBinaryHost",
+         "packageId" : "cortana.xdevice",
+         "type" : "binary"
+      }
+   ],
+   "ProtocolLiveTraceEnabled" : false,
+   "ProtocolLiveTraceServer" : "",
+   "ProtocolVersionBrokerEnabled" : false,
+   "TcpTransportEnabled" : true,
+   "TcpTransportHostingAllowed" : true,
+   "TcpTransportUpgradeRequired" : false,
+   "TraceLog.EnabledHandlerTypes" : 66,
+   "TraceLog.Level" : 3,
+   "UdpTransportEnabled" : true,
+   "UdpTransportHostingAllowed" : true,
+   "VirtualDeviceId" : "B6CF3536-7DBD-D2ED-750E-B1AF1CF5BF19",
+   "WifiDirectTransportEnabled" : true,
+   "WifiDirectTransportHostingAllowed" : false
+}

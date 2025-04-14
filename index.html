@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>정현범 포트폴리오</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">정현범</div>
+    <div class="nav-links">
+      <a href="#about">소개</a>
+      <a href="#projects">프로젝트</a>
+      <a href="#skills">기술</a>
+      <a href="#contact">연락처</a>
+      <button id="toggle-mode">🌙</button>
+    </div>
+  </nav>
+
+  <header class="hero fade-in">
+    <h1>성악가이자 사이버보안 전공자</h1>
+    <p>예술과 기술의 경계를 넘다</p>
+  </header>
+
+  <main class="container">
+    <section id="about" class="fade-in">
+      <h2>소개</h2>
+      <p>단국대학교 성악 전공, 사이버보안 복수전공. 음악과 보안의 융합 가능성을 탐구하며, 클라우드 보안, 리버스 엔지니어링, 개인정보 보호에 관심이 많습니다.</p>
+    </section>
+
+    <section id="projects" class="fade-in">
+      <h2>프로젝트</h2>
+      <ul>
+        <li><strong>클라우드 보안 보고서</strong> – PDF 미리보기:</li>
+      </ul>
+      <iframe src="report.pdf" width="100%" height="400px" frameborder="0"></iframe>
+    </section>
+
+    <section id="skills" class="fade-in">
+      <h2>기술 스택</h2>
+      <p>C, Python, Git, Linux, HTML, CSS, Reverse Engineering, Premiere Pro</p>
+    </section>
+
+    <section id="contact" class="fade-in">
+      <h2>연락처</h2>
+      <p>Email: ehdgusqja@gmail.com</p>
+      <p>GitHub: <a href="https://github.com/32204232" target="_blank">github.com/32204232</a></p>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 정현범
+  </footer>
+
+  <script>
+    // 다크모드 toggle
+    const btn = document.getElementById('toggle-mode');
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('light');
+    });
+
+    // 스크롤 애니메이션
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.1 });
+
+    fadeEls.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
