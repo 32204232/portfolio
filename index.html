@@ -20,8 +20,8 @@
   </nav>
 
   <header class="hero fade-in">
-    <h1>성악가이자 사이버보안 전공자</h1>
-    <p>예술과 기술의 경계를 넘다</p>
+    <h1>성악가전공자이자 사이버보안 전공자</h1>
+    <p>예술과 기술을 합치다다</p>
   </header>
 
   <main class="container">
@@ -30,9 +30,21 @@
       <img src="/portfolio/photo.jpg" alt="정현범 프로필 사진" class="profile-photo" />
       <p>
         단국대학교 성악 전공, 사이버보안 복수전공.  
-        음악과 보안의 융합 가능성을 탐구하며, 클라우드 보안, 리버스 엔지니어링,  
-        개인정보 보호에 관심이 많습니다.
       </p>
+    </section>
+    <section id="youtube" class="fade-in">
+      <h2>유튜브 영상</h2>
+      <div class="video-wrapper">
+        <iframe 
+          width="560" 
+          height="315" 
+          src="https://www.youtube.com/embed/97SC9MZAFYA" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
     </section>
     
     
@@ -66,6 +78,16 @@
     const btn = document.getElementById('toggle-mode');
     btn.addEventListener('click', () => {
       document.body.classList.toggle('light');
+      // 페이지 로드시 다크모드 상태 복원
+if (localStorage.getItem('mode') === 'light') {
+  document.body.classList.add('light');
+}
+
+btn.addEventListener('click', () => {
+  document.body.classList.toggle('light');
+  localStorage.setItem('mode', document.body.classList.contains('light') ? 'light' : 'dark');
+});
+
     });
 
     // 스크롤 애니메이션
