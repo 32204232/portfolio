@@ -9,13 +9,38 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
-/* 라이트 모드 */
+/* === 라이트 모드 === */
 body.light {
   background-color: #f4f4f4;
   color: #222;
 }
 
-/* 링크 */
+/* 라이트 모드 세부 색상 지정 */
+body.light .navbar {
+  background-color: #ffffff;
+}
+
+body.light .logo {
+  color: #222;
+}
+
+body.light .hero {
+  background-color: #eaeaea;
+}
+
+body.light h1,
+body.light h2,
+body.light p,
+body.light a,
+body.light .nav-links a {
+  color: #222;
+}
+
+body.light footer {
+  color: #555;
+}
+
+/* === 링크 === */
 a {
   color: #4da6ff;
   text-decoration: none;
@@ -45,6 +70,11 @@ a {
 
 .navbar button:hover {
   opacity: 0.7;
+}
+
+.nav-links img {
+  margin-left: 10px;
+  vertical-align: middle;
 }
 
 /* === 히어로 === */
@@ -99,9 +129,19 @@ section {
   transform: translateY(20px);
   transition: all 0.7s ease;
 }
+
 .fade-in.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* 다국어 전환 시 페이드 효과 */
+[data-key] {
+  transition: opacity 0.3s ease;
+}
+
+.lang-fade {
+  opacity: 0;
 }
 
 /* === 푸터 === */

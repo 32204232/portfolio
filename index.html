@@ -4,39 +4,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>정현범 | 포트폴리오</title>
+  
   <meta name="description" content="성악과 전공과 사이버보안 복수전공을 융합한 정현범의 포트폴리오입니다.">
   <link rel="stylesheet" href="style.css" />
+  <style>
+    [data-key] {
+      transition: opacity 0.3s ease;
+    }
+    .lang-fade {
+      opacity: 0;
+    }
+  </style>
 </head>
 <body>
 
   <nav class="navbar">
-    <div class="logo">정현범</div>
+    <div class="logo" data-key="logo">정현범</div>
     <div class="nav-links">
-      <a href="#about">소개</a>
-      <a href="#projects">프로젝트</a>
-      <a href="#skills">기술</a>
-      <a href="#contact">연락처</a>
+      <a href="#about" data-key="about">소개</a>
+      <a href="#projects" data-key="projects">프로젝트</a>
+      <a href="#skills" data-key="skills">기술</a>
+      <a href="#contact" data-key="contact">연락처</a>
       <button id="toggle-mode">🌙</button>
+      <img src="kr.png" id="to-ko" alt="한국어" title="한국어" style="width: 25px; cursor: pointer; display: none;">
+      <img src="us.png" id="to-en" alt="English" title="English" style="width: 25px; cursor: pointer;">
     </div>
   </nav>
-
+  
   <header class="hero fade-in">
-    <h1>성악 전공자이자 사이버보안 전공자</h1>
-    <p>예술과 기술을 합치다</p>
+    <h1 data-key="title">성악 전공자이자 사이버보안 전공자</h1>
+    <p data-key="desc">예술과 기술을 합치다</p>
   </header>
 
   <main class="container">
     <section id="about" class="fade-in">
-      <h2>소개</h2>
+      <h2 data-key="about">소개</h2>
       <img src="/portfolio/photo.jpg" alt="정현범 프로필 사진" class="profile-photo" />
-      <p>
+      <p data-key="intro-text">
         단국대학교 성악 전공, 사이버보안 복수전공 <br /> 
         유튜브 "Victenor" 운영 중
       </p>
     </section>
 
     <section id="youtube" class="fade-in">
-      <h2>유튜브 영상</h2>
+      <h2 data-key="youtube">유튜브 영상</h2>
       <div class="video-wrapper">
         <iframe 
           width="560" 
@@ -51,52 +62,52 @@
     </section>
 
     <section id="projects" class="fade-in">
-      <h2>프로젝트</h2>
+      <h2 data-key="projects">프로젝트</h2>
       <ul>
-        <li><strong>클라우드 보안 보고서</strong> – PDF 미리보기:</li>
+        <li><strong data-key="report-title">클라우드 보안 보고서</strong> – PDF 미리보기:</li>
       </ul>
       <iframe src="report.pdf" width="100%" height="400px" frameborder="0"></iframe>
     </section>
 
     <section id="skills" class="fade-in">
-      <h2>기술 스택</h2>
+      <h2 data-key="skills">기술 스택</h2>
       <p>C, Python, Git, Linux, HTML, CSS, Reverse Engineering, Premiere Pro</p>
     </section>
 
     <section id="contact" class="fade-in">
-      <h2>연락처</h2>
+      <h2 data-key="contact">연락처</h2>
       <p>Email: ehdgusqja@gmail.com</p>
       <p>GitHub: <a href="https://github.com/32204232" target="_blank">github.com/32204232</a></p>
     </section>
   </main>
 
-  <footer>
+  <footer data-key="footer">
     © 2025 정현범
   </footer>
 
+  <!-- 기존 스크립트 (다크모드 + 애니메이션) -->
   <script>
-    // 페이지 로드시 다크모드 상태 복원
     const btn = document.getElementById('toggle-mode');
     if (localStorage.getItem('mode') === 'light') {
       document.body.classList.add('light');
     }
 
-    // 버튼 클릭 시 모드 전환
     btn.addEventListener('click', () => {
       document.body.classList.toggle('light');
       localStorage.setItem('mode', document.body.classList.contains('light') ? 'light' : 'dark');
     });
 
-    // 스크롤 애니메이션
     const fadeEls = document.querySelectorAll('.fade-in');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.classList.add('show');
       });
     }, { threshold: 0.1 });
-
     fadeEls.forEach(el => observer.observe(el));
   </script>
+
+  <!-- 언어 전환 기능 -->
+  <script src="lang.js"></script>
 
 </body>
 </html>
