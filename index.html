@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>정현범 포트폴리오</title>
+  <title>정현범 | 포트폴리오</title>
+  <meta name="description" content="성악과 전공과 사이버보안 복수전공을 융합한 정현범의 포트폴리오입니다.">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -21,7 +22,7 @@
 
   <header class="hero fade-in">
     <h1>성악가전공자이자 사이버보안 전공자</h1>
-    <p>예술과 기술을 합치다다</p>
+    <p>예술과 기술을 합치다</p>
   </header>
 
   <main class="container">
@@ -32,6 +33,7 @@
         단국대학교 성악 전공, 사이버보안 복수전공.  
       </p>
     </section>
+
     <section id="youtube" class="fade-in">
       <h2>유튜브 영상</h2>
       <div class="video-wrapper">
@@ -46,8 +48,6 @@
         </iframe>
       </div>
     </section>
-    
-    
 
     <section id="projects" class="fade-in">
       <h2>프로젝트</h2>
@@ -74,20 +74,16 @@
   </footer>
 
   <script>
-    // 다크모드 toggle
+    // 페이지 로드시 다크모드 상태 복원
     const btn = document.getElementById('toggle-mode');
+    if (localStorage.getItem('mode') === 'light') {
+      document.body.classList.add('light');
+    }
+
+    // 버튼 클릭 시 모드 전환
     btn.addEventListener('click', () => {
       document.body.classList.toggle('light');
-      // 페이지 로드시 다크모드 상태 복원
-if (localStorage.getItem('mode') === 'light') {
-  document.body.classList.add('light');
-}
-
-btn.addEventListener('click', () => {
-  document.body.classList.toggle('light');
-  localStorage.setItem('mode', document.body.classList.contains('light') ? 'light' : 'dark');
-});
-
+      localStorage.setItem('mode', document.body.classList.contains('light') ? 'light' : 'dark');
     });
 
     // 스크롤 애니메이션

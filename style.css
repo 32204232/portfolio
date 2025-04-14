@@ -1,25 +1,27 @@
-/* 기본 다크모드 (iPhone 스타일) */
+/* === 기본 설정 === */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 16px;
   background-color: #121212;
   color: #eee;
   line-height: 1.6;
   transition: background 0.3s, color 0.3s;
 }
 
-/* light 모드 */
+/* 라이트 모드 */
 body.light {
   background-color: #f4f4f4;
   color: #222;
 }
 
+/* 링크 */
 a {
   color: #4da6ff;
   text-decoration: none;
 }
 
-/* 네비게이션 */
+/* === 네비게이션 === */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -41,14 +43,18 @@ a {
   cursor: pointer;
 }
 
-/* 히어로 */
+.navbar button:hover {
+  opacity: 0.7;
+}
+
+/* === 히어로 === */
 .hero {
   text-align: center;
   padding: 4rem 1rem;
   background: #222;
 }
 
-/* 섹션 */
+/* === 컨테이너 및 섹션 === */
 .container {
   max-width: 800px;
   margin: auto;
@@ -59,63 +65,7 @@ section {
   margin-bottom: 3rem;
 }
 
-/* 애니메이션 */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.7s ease;
-}
-.fade-in.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* 푸터 */
-footer {
-  text-align: center;
-  padding: 1.5rem;
-  color: #777;
-  font-size: 0.9rem;
-}
-
-/* 반응형 */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-  }
-  iframe {
-    height: 300px;
-  }
-}
-.profile-photo {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  margin: 1rem auto;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-  }
-
-  .container {
-    padding: 1rem;
-  }
-
-  .profile-photo {
-    width: 100%;
-    max-width: 300px;
-  }
-}
+/* === 유튜브 비디오 === */
 .video-wrapper {
   position: relative;
   padding-bottom: 56.25%;
@@ -132,3 +82,59 @@ footer {
   height: 100%;
 }
 
+/* === 프로필 이미지 === */
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 1rem auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* === 애니메이션 === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.7s ease;
+}
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === 푸터 === */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* === 반응형 스타일 === */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .profile-photo {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  iframe {
+    height: 300px;
+  }
+}
