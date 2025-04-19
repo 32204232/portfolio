@@ -15,7 +15,6 @@ body.light {
   color: #222;
 }
 
-/* 라이트 모드 세부 색상 지정 */
 body.light .navbar {
   background-color: #ffffff;
 }
@@ -38,6 +37,16 @@ body.light .nav-links a {
 
 body.light footer {
   color: #555;
+}
+
+body.light .nav-links {
+  background-color: #ffffff;
+  color: #222;
+}
+
+body.light .nav-links a,
+body.light .nav-links button {
+  color: #222;
 }
 
 /* === 링크 === */
@@ -75,6 +84,37 @@ a {
 .nav-links img {
   margin-left: 10px;
   vertical-align: middle;
+}
+
+/* === 목차 메뉴 설정 (모바일 기본 숨김) === */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  gap: 0.8rem;
+  background-color: #1c1c1c;
+  color: #eee;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  z-index: 9;
+}
+
+.nav-links.show {
+  display: flex;
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: left;
+  padding-left: 0;
+  margin: 0;
+  align-self: flex-start;
 }
 
 /* === 히어로 === */
@@ -153,28 +193,25 @@ footer {
 }
 
 /* === 반응형 스타일 === */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
+@media (min-width: 768px) {
+  .hamburger {
+    display: none !important;
   }
 
   .nav-links {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: none;
+    width: auto;
+    padding: 0;
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto !important;
   }
 
-  .container {
-    padding: 1rem;
-  }
-
-  .profile-photo {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  iframe {
-    height: 300px;
+  .nav-links button {
+    margin-left: 1rem;
+    margin-top: 0;
   }
 }

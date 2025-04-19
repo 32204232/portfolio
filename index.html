@@ -1,25 +1,103 @@
+<link rel="stylesheet" href="style_final.css" />
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>정현범 | 포트폴리오</title>
-
-  <script>
-    const isMobile = /iPhone|Android|iPad|iPod|Mobile/i.test(navigator.userAgent);
-    if (isMobile) {
-      window.location.replace("./mobile/index.html");
-    }
-  </script>
-  
-  <meta name="description" content="성악과 전공과 사이버보안 복수전공을 융합한 정현범의 포트폴리오입니다.">
-  <link rel="stylesheet" href="style.css" />
+  <title>정현범 | 모바일 포트폴리오</title>
+  <link rel="stylesheet" href="../style.css" />
   <style>
-    [data-key] {
-      transition: opacity 0.3s ease;
+    body {
+      font-size: 15px;
     }
-    .lang-fade {
+
+    .navbar {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .hamburger {
+      display: block;
+      font-size: 24px;
+      background: none;
+      border: none;
+      color: inherit;
+      cursor: pointer;
+    }
+
+    .nav-links {
       opacity: 0;
+      transform: translateY(-10px);
+      pointer-events: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      background-color: #1c1c1c;
+      color: #eee;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      padding: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .nav-links.show {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .nav-links button {
+      background: none;
+      border: none;
+      color: inherit;
+      font-size: 1rem;
+      cursor: pointer;
+      text-align: left;
+      padding-left: 0;
+    }
+
+    body.light .nav-links {
+      background-color: #ffffff;
+      color: #222;
+    }
+
+    .container {
+      padding: 1rem;
+    }
+
+    .profile-photo {
+      width: 100%;
+      max-width: 280px;
+    }
+
+    iframe {
+      height: 300px;
+    }
+
+    @media (min-width: 768px) {
+      .hamburger {
+        display: none;
+      }
+
+      .nav-links {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        background: none;
+        width: auto;
+        padding: 0;
+        opacity: 1 !important;
+        transform: none !important;
+        pointer-events: auto !important;
+      }
+
+      .nav-links button {
+        margin-left: 1rem;
+        margin-top: 0;
+      }
     }
   </style>
 </head>
@@ -27,26 +105,26 @@
 
   <nav class="navbar">
     <div class="logo" data-key="logo">정현범</div>
-    <div class="nav-links">
+    <button class="hamburger" id="hamburger">☰</button>
+    <div class="nav-links" id="nav-links">
       <a href="#about" data-key="about">소개</a>
       <a href="#projects" data-key="projects">프로젝트</a>
       <a href="#skills" data-key="skills">기술</a>
       <a href="#contact" data-key="contact">연락처</a>
-      <button id="toggle-mode">🌙</button>
-      <img src="kr.png" id="to-ko" alt="한국어" title="한국어" style="width: 25px; cursor: pointer; display: none;">
-      <img src="us.png" id="to-en" alt="English" title="English" style="width: 25px; cursor: pointer;">
+      <button id="toggle-mode" data-key="mode-toggle">다크모드</button>
+      <button id="lang-toggle" data-key="lang-toggle">영어 전환</button>
     </div>
   </nav>
-  
+
   <header class="hero fade-in">
-    <h1 data-key="title">성악 전공자이자 사이버보안 전공자</h1>
+    <h1 data-key="title">성악 전공, 사이버보안 전공</h1>
     <p data-key="desc">예술과 기술을 합치다</p>
   </header>
 
   <main class="container">
     <section id="about" class="fade-in">
       <h2 data-key="about">소개</h2>
-      <img src="/portfolio/photo.jpg" alt="정현범 프로필 사진" class="profile-photo" />
+      <img src="../portfolio/photo.jpg" alt="정현범 프로필 사진" class="profile-photo" />
       <p data-key="intro-text">
         단국대학교 성악 전공, 사이버보안 복수전공 <br /> 
         유튜브 "Victenor" 운영 중
@@ -57,8 +135,7 @@
       <h2 data-key="youtube">유튜브 영상</h2>
       <div class="video-wrapper">
         <iframe 
-          width="560" 
-          height="315" 
+          width="100%" 
           src="https://www.youtube.com/embed/97SC9MZAFYA" 
           title="YouTube video player" 
           frameborder="0" 
@@ -71,9 +148,9 @@
     <section id="projects" class="fade-in">
       <h2 data-key="projects">프로젝트</h2>
       <ul>
-        <li><strong data-key="report-title">클라우드 보안 보고서</strong> <strong>PDF</strong></li>
+        <li><strong data-key="report-title">클라우드 보안 보고서</strong> - <a href="../report.pdf" download data-key="pdf-download">PDF 다운로드</a></li>
+        <li><strong>JLPT 단어장 앱</strong> - <a href="https://github.com/32204232/JLPT" target="_blank" data-key="github-view">GitHub 보기</a></li>
       </ul>
-      <iframe src="report.pdf" width="100%" height="400px" frameborder="0"></iframe>
     </section>
 
     <section id="skills" class="fade-in">
@@ -92,16 +169,36 @@
     © 2025 정현범
   </footer>
 
-  <!-- 기존 스크립트 (다크모드 + 애니메이션) -->
+  <script src="../lang.js"></script>
   <script>
-    const btn = document.getElementById('toggle-mode');
+    const modeBtn = document.getElementById('toggle-mode');
+    const langBtn = document.getElementById('lang-toggle');
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
+
     if (localStorage.getItem('mode') === 'light') {
       document.body.classList.add('light');
     }
 
-    btn.addEventListener('click', () => {
+    function updateModeLabel() {
+      const isLight = document.body.classList.contains('light');
+      modeBtn.textContent = isLight ? "다크모드" : "밝은모드";
+      modeBtn.setAttribute("data-key", "mode-toggle");
+    }
+
+    modeBtn.addEventListener('click', () => {
       document.body.classList.toggle('light');
       localStorage.setItem('mode', document.body.classList.contains('light') ? 'light' : 'dark');
+      updateModeLabel();
+    });
+
+    updateModeLabel();
+
+    langBtn.addEventListener('click', () => {
+      const lang = document.documentElement.lang === "ko" ? "en" : "ko";
+      document.documentElement.lang = lang;
+      setLang(lang);
+      langBtn.textContent = lang === "ko" ? "영어 전환" : "한글 전환";
     });
 
     const fadeEls = document.querySelectorAll('.fade-in');
@@ -111,10 +208,10 @@
       });
     }, { threshold: 0.1 });
     fadeEls.forEach(el => observer.observe(el));
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
   </script>
-
-  <!-- 언어 전환 기능 -->
-  <script src="lang.js"></script>
-
 </body>
 </html>
