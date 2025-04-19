@@ -35,8 +35,6 @@ const langData = {
   }
 };
 
-const toEnBtn = document.getElementById("to-en");
-const toKoBtn = document.getElementById("to-ko");
 
 function setLang(lang) {
   const elements = document.querySelectorAll("[data-key]");
@@ -58,11 +56,7 @@ function setLang(lang) {
       el.classList.remove("lang-fade"); // 페이드 인
     });
 
-    // 3. 버튼 전환 (국기 아이콘 숨김 처리용, 현재 사용 안함)
-    if (toEnBtn && toKoBtn) {
-      toEnBtn.style.display = lang === "en" ? "none" : "inline";
-      toKoBtn.style.display = lang === "en" ? "inline" : "none";
-    }
+
   }, 200);
 }
 

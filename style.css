@@ -15,11 +15,18 @@ body.light {
   color: #222;
 }
 
-body.light .navbar {
+body.light .navbar,
+body.light .nav-links {
   background-color: #ffffff;
 }
 
-body.light .logo {
+body.light .logo,
+body.light h1,
+body.light h2,
+body.light p,
+body.light a,
+body.light .nav-links a,
+body.light .nav-links button {
   color: #222;
 }
 
@@ -27,29 +34,11 @@ body.light .hero {
   background-color: #eaeaea;
 }
 
-body.light h1,
-body.light h2,
-body.light p,
-body.light a,
-body.light .nav-links a {
-  color: #222;
-}
-
 body.light footer {
   color: #555;
 }
 
-body.light .nav-links {
-  background-color: #ffffff;
-  color: #222;
-}
-
-body.light .nav-links a,
-body.light .nav-links button {
-  color: #222;
-}
-
-/* === 링크 === */
+/* === 링크 기본 === */
 a {
   color: #4da6ff;
   text-decoration: none;
@@ -67,30 +56,13 @@ a {
   z-index: 10;
 }
 
-.nav-links a,
-.navbar button {
-  margin-left: 1rem;
-  color: inherit;
-  background: none;
-  border: none;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
 .navbar button:hover {
   opacity: 0.7;
 }
 
-.nav-links img {
-  margin-left: 10px;
-  vertical-align: middle;
-}
-
-/* === 목차 메뉴 설정 (모바일 기본 숨김) === */
 .nav-links {
   display: none;
   flex-direction: column;
-  gap: 0.8rem;
   background-color: #1c1c1c;
   color: #eee;
   position: absolute;
@@ -99,22 +71,47 @@ a {
   width: 100%;
   padding: 1rem;
   z-index: 9;
+  gap: 0.4rem;
 }
 
 .nav-links.show {
   display: flex;
 }
 
+.nav-links a,
 .nav-links button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
   background: none;
   border: none;
   color: inherit;
-  font-size: 1rem;
   cursor: pointer;
-  text-align: left;
-  padding-left: 0;
-  margin: 0;
-  align-self: flex-start;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: 1.6;
+  border-radius: 6px;
+}
+
+.nav-links a:hover,
+.nav-links button:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.hamburger {
+  display: block;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.nav-links img {
+  margin-left: 10px;
+  vertical-align: middle;
 }
 
 /* === 히어로 === */
@@ -175,7 +172,7 @@ section {
   transform: translateY(0);
 }
 
-/* 다국어 전환 시 페이드 효과 */
+/* === 다국어 전환 페이드 효과 === */
 [data-key] {
   transition: opacity 0.3s ease;
 }
@@ -192,7 +189,7 @@ footer {
   font-size: 0.9rem;
 }
 
-/* === 반응형 스타일 === */
+/* === 반응형 === */
 @media (min-width: 768px) {
   .hamburger {
     display: none !important;
@@ -208,10 +205,17 @@ footer {
     opacity: 1 !important;
     transform: none !important;
     pointer-events: auto !important;
+    gap: 1rem;
   }
 
+  .nav-links a,
   .nav-links button {
-    margin-left: 1rem;
-    margin-top: 0;
+    display: inline;
+    width: auto;
+    text-align: center;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
   }
 }
